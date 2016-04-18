@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.jimmy.goviral.MainActivity"
-    android:padding="-1dp">
+    android:padding="-1dp"
+    android:weightSum="1">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -40,14 +41,6 @@
 
         </LinearLayout>
 
-        <ImageButton
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton"
-            android:src="@mipmap/information"
-            android:background="#DDDDDDDD"
-            android:layout_weight="9" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -66,11 +59,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="火热影片..."
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="火熱影片..."
             android:textColor="#F00"
             android:id="@+id/textView2"
-            android:gravity="bottom" />
+            style="@style/Base.Animation.AppCompat.Dialog" />
 
     </LinearLayout>
 
@@ -80,26 +73,56 @@
         android:layout_height="wrap_content"
         android:weightSum="1">
 
-
         <com.google.android.youtube.player.YouTubePlayerView
-            android:id="@+id/youtubeplayerview"
+            android:id="@+id/youtube_player"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="135dp"/>
 
     </LinearLayout>
-<!--
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="47dp"
+        android:gravity="center"
+        android:id="@+id/trend_play">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="觀看次數:2"
+            android:id="@+id/textView3" />
+
+    </LinearLayout>
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:id="@+id/trend_play">
+        android:id="@+id/linearLayout2"
+        android:layout_weight="0.21"
+        android:background="#ffff66" >
 
-        <ImageButton
-            android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button"
-            android:src="@mipmap/rsz_play_next_music_movie_film" />
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="最新上傳"
+            android:id="@+id/textView5"
+            android:layout_weight="319.50" />
     </LinearLayout>
--->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="224dp"
+        android:gravity="center"
+        android:id="@+id/linearLayout"
+        android:background="#ffff66"
+        android:weightSum="1">
+
+    </LinearLayout>
+
 </LinearLayout>
